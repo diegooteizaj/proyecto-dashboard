@@ -27,11 +27,11 @@ export class GiradosPorZonaComponent implements OnInit{
 
   constructor() {
     this.chartOptions = {
-      series: [44, 55, 13, 43, 22],
+      series: [44, 55, 13, 43, 22,5],
       chart: {
         type: "donut"
       },
-      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      labels: ["Zona A", "Zona B", "Zona C", "Zona C1", "Zona C2","Zona C3"],
       responsive: [
         {
           breakpoint: 480,

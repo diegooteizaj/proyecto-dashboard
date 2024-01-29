@@ -41,18 +41,24 @@ export class LineaTiempoTramoBajoComponent {
   constructor() {
     this.chartOptions = {
       series: [
+        
         {
-          name: "Session Duration",
-          data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+          name: "Minimo",
+          data: [35, 41, 50, 42, 13, 18, 29, 37, 36, 50, 32, 35]
         },
         {
-          name: "Page Views",
-          data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+          name: "Nominal",
+          data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
         },
         {
-          name: "Total Visits",
-          data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+          name: "Alerta",
+          data: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+        },
+        {
+          name: "Limite técnico",
+          data: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
         }
+        
       ],
       chart: {
         height: 350,
@@ -91,18 +97,18 @@ export class LineaTiempoTramoBajoComponent {
           trim: false
         },
         categories: [
-          "01 Jan",
-          "02 Jan",
-          "03 Jan",
-          "04 Jan",
-          "05 Jan",
-          "06 Jan",
-          "07 Jan",
-          "08 Jan",
-          "09 Jan",
-          "10 Jan",
-          "11 Jan",
-          "12 Jan"
+          "000",
+          "090",
+          "003",
+          "055",
+          "020",
+          "025",
+          "030",
+          "094",
+          "097",
+          "098",
+          "100",
+          "104"
         ]
       },
       tooltip: {
@@ -110,14 +116,14 @@ export class LineaTiempoTramoBajoComponent {
           {
             title: {
               formatter: function(val: string) {
-                return val + " (mins)";
+                return val + " (mm)";
               }
             }
           },
           {
             title: {
               formatter: function(val: string) {
-                return val + " per session";
+                return val;
               }
             }
           },
