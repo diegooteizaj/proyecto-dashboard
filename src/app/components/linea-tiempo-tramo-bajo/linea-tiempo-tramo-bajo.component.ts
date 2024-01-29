@@ -44,7 +44,7 @@ export class LineaTiempoTramoBajoComponent {
         
         {
           name: "Minimo",
-          data: [35, 41, 50, 42, 13, 18, 29, 37, 36, 50, 32, 35]
+          data: [50, 47, 44, 41, 40, 40, 37, 35, 36, 32, 30, 29]
         },
         {
           name: "Nominal",
@@ -60,7 +60,7 @@ export class LineaTiempoTramoBajoComponent {
         },
         {
           name:"Proyectado",
-          data:[50, 48, 43, 40, 40, 39, 35, 36, 34, 31, 30, 29]
+          data:[50, 48, 43, 40, 40, 39, 35, 36, 34, 31, 30, 27]
         }
         
       ],
