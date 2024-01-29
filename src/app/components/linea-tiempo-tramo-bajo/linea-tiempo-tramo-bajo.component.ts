@@ -57,6 +57,10 @@ export class LineaTiempoTramoBajoComponent {
         {
           name: "Limite técnico",
           data: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+        },
+        {
+          name:"Proyectado",
+          data:[50, 48, 43, 40, 40, 39, 35, 36, 34, 31, 30, 29]
         }
         
       ],
@@ -96,20 +100,28 @@ export class LineaTiempoTramoBajoComponent {
         labels: {
           trim: false
         },
+        title:{
+          text:"Horas Operativas"
+        },
         categories: [
-          "000",
-          "090",
-          "003",
-          "055",
-          "020",
-          "025",
-          "030",
-          "094",
-          "097",
-          "098",
-          "100",
-          "104"
+          "2000",
+          "4000",
+          "6000",
+          "8000",
+          "10000",
+          "12000",
+          "14000",
+          "16000",
+          "18000",
+          "20000",
+          "22000",
+          "24000"
         ]
+      },
+      yaxis:{
+        title:{
+          text:"mm"
+        }
       },
       tooltip: {
         y: [
