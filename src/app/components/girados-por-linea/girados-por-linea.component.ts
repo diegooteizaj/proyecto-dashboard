@@ -3,19 +3,15 @@ import { ChartComponent } from "ng-apexcharts";
 
 import {
   ApexNonAxisChartSeries,
-  ApexResponsive,
-  ApexChart,
-  ApexStroke,
-  ApexFill
+  ApexPlotOptions,
+  ApexChart
 } from "ng-apexcharts";
 
 export type ChartOptions = {
   series: ApexNonAxisChartSeries;
   chart: ApexChart;
-  responsive: ApexResponsive[];
-  labels: any;
-  stroke: ApexStroke;
-  fill: ApexFill;
+  labels: string[];
+  plotOptions: ApexPlotOptions;
 };
 
 @Component({
@@ -29,29 +25,31 @@ export class GiradosPorLineaComponent {
 
   constructor() {
     this.chartOptions = {
-      series: [14, 23, 21, 17, 15, 10, 12, 17, 21],
+      series: [30, 50, 21, 20],
       chart: {
-        type: "polarArea"
+        height: 350,
+        type: "radialBar"
       },
-      stroke: {
-        colors: ["#fff"]
-      },
-      fill: {
-        opacity: 0.8
-      },
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
+      plotOptions: {
+        radialBar: {
+          dataLabels: {
+            name: {
+              fontSize: "22px"
             },
-            legend: {
-              position: "bottom"
+            value: {
+              fontSize: "16px"
+            },
+            total: {
+              show: true,
+              label: "Total Girados",
+              formatter: function(w) {
+                return "121";
+              }
             }
           }
         }
-      ]
+      },
+      labels: ["Linea Principal", "Linea Bypass", "Linea Muro", "Linea Lateral"]
     };
   }
 }
