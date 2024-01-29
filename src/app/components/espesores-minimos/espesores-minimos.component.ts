@@ -38,19 +38,24 @@ export class EspesoresMinimosComponent {
     this.chartOptions = {
       series: [
         {
-          name: "TEAM A",
+          name: "Espesor",
           type: "column",
-          data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+          data: [50, 48, 47, 40, 50, 30, 20, 30, 38, 50, 30]
         },
         {
-          name: "TEAM B",
+          name: "Espesor Nominal",
           type: "area",
-          data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+          data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
         },
         {
-          name: "TEAM C",
+          name: "Alerta",
           type: "line",
-          data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+          data: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
+        },
+        {
+          name: "Inaceptable",
+          type: "line",
+          data: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
         }
       ],
       chart: {
@@ -80,27 +85,29 @@ export class EspesoresMinimosComponent {
         }
       },
       labels: [
-        "01/01/2003",
-        "02/01/2003",
-        "03/01/2003",
-        "04/01/2003",
-        "05/01/2003",
-        "06/01/2003",
-        "07/01/2003",
-        "08/01/2003",
-        "09/01/2003",
-        "10/01/2003",
-        "11/01/2003"
+        "000",
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010"
       ],
       markers: {
         size: 0
       },
       xaxis: {
-        type: "datetime"
+       title:{
+        text:"Tramos"
+       }
       },
       yaxis: {
         title: {
-          text: "Points"
+          text: "mm"
         },
         min: 0
       },
@@ -110,7 +117,7 @@ export class EspesoresMinimosComponent {
         y: {
           formatter: function(y) {
             if (typeof y !== "undefined") {
-              return y.toFixed(0) + " points";
+              return y.toFixed(0) + " mm";
             }
             return y;
           }
