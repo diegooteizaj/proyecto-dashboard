@@ -24,6 +24,8 @@ export class DashboardComponent implements OnInit {
   @ViewChild("chart") chart!: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
 
+  titulo:string='La Brea';
+
   constructor() {
     this.chartOptions = {
       series: [44, 55, 13, 43, 22],
@@ -47,6 +49,17 @@ export class DashboardComponent implements OnInit {
     };
   }
   ngOnInit(): void {
+  }
+
+  recibirMensaje(mensaje: string) {
+    console.log('Mensaje del hijo:', mensaje);
+    if(mensaje=='LaBrea'){
+      this.titulo='La Brea';
+    }else if(mensaje=='LaArena'){
+      this.titulo='La Arena';
+    }else{
+      this.titulo='Lama Ducto';
+    }
   }
 
 }

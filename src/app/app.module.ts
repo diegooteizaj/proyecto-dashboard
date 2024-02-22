@@ -9,6 +9,7 @@ import { GiradosPorLineaComponent } from './components/girados-por-linea/girados
 import { GiradosPorZonaComponent } from './components/girados-por-zona/girados-por-zona.component';
 import { LineaTiempoTramoBajoComponent } from './components/linea-tiempo-tramo-bajo/linea-tiempo-tramo-bajo.component';
 import { EspesoresMinimosComponent } from './components/espesores-minimos/espesores-minimos.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EspesoresMinimosComponent } from './components/espesores-minimos/espeso
     GiradosPorLineaComponent,
     GiradosPorZonaComponent,
     LineaTiempoTramoBajoComponent,
-    EspesoresMinimosComponent
+    EspesoresMinimosComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

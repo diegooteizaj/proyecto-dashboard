@@ -1,23 +1,30 @@
 <div class="container">
+    <app-header (mensajeParaPadre)="recibirMensaje($event)"></app-header>
+    <h1>{{this.titulo}}</h1>
+    
     <div class="row">
-        <div class="col-6">
-            <h2>Ductos Girados Por Linea</h2>
-            <app-girados-por-linea></app-girados-por-linea>
+         <div class="col-12">
+            <h2>Espesores minimos por zona</h2>
+            <app-espesores-minimos></app-espesores-minimos>
+        </div> 
+       
+
+    <div class="row">
+        <div class="col-4">
+            <h2>Linea de tiempo tramo mas bajo</h2>
+            <app-linea-tiempo-tramo-bajo></app-linea-tiempo-tramo-bajo>
         </div>
-        <div class="col-6">
+         
+        <div class="col-4">
             <h2>Ductos Girados Por Zona</h2>
             <app-girados-por-zona></app-girados-por-zona>
         </div>
 
-    <div class="row">
-        <div class="col-6">
-            <h2>Linea de tiempo tramo mas bajo</h2>
-            <app-linea-tiempo-tramo-bajo></app-linea-tiempo-tramo-bajo>
+        <div class="col-4">
+            <h2>Ductos Girados Por Linea</h2>
+            <app-girados-por-linea></app-girados-por-linea>
         </div>
-        <div class="col-6">
-            <h2>Espesores minimos por zona</h2>
-            <app-espesores-minimos></app-espesores-minimos>
-            
+       
     </div>
     
 </div>
